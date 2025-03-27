@@ -7,29 +7,38 @@
 ShoppingList::ShoppingList(std::string n) : name(n) {}
 
 void ShoppingList::addItem(const Item& item) {
-    items.push_back(item);
-    notify();
+    items [item.getName()] = item;
+    notifyObserver();
 }
 
 void ShoppingList::removeItem(const std::string& itemName) {
-    items.erase(std::remove_if(items.begin(), items.end(),
-                               [&](Item& item) { return item.getName() == itemName; }), items.end());
-    notify();
+    if (items.erase(itemName) > 0) {  // Rimuove e verifica se esisteva
+        notifyObserver();
+        }
 }
 
 void ShoppingList::attach(Observer* obs) {
-    observers.push_back(obs);
+    if (std::find(observers.begin(), observers.end(), obs) == observers.end()) {
+        observers.push_back(obs);
+    }
 }
 
 void ShoppingList::detach(Observer* obs) {
     observers.erase(std::remove(observers.begin(), observers.end(), obs), observers.end());
 }
 
-void ShoppingList::notify() {
+void ShoppingList::notifyObserver()  {
     for (auto* obs : observers) {
         obs->update(this);
     }
 }
 
-std::vector<Item> ShoppingList::getItems() const { return items; }
+std::vector<Item> ShoppingList::getItems() const {
+    std::vector<Item> itemList;
+    for (const auto& pair : items) {
+        itemList.push_back(pair.second);
+    }
+    return itemList;
+}
+
 std::string ShoppingList::getName() const { return name; }
