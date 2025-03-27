@@ -15,6 +15,7 @@ private:
     int quantity;
 
 public:
+    Item()=default;
     Item(std::string n, std::string c, int q);
 
     std::string getName() const;

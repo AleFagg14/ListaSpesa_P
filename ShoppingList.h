@@ -13,7 +13,7 @@
 #include "Observer.h"
 
 
-class ShoppingList : public Subject{
+class ShoppingList {
 private:
     std::string name;
     std::unordered_map<std::string, Item> items;
@@ -24,9 +24,9 @@ public:
 
     void addItem(const Item& item);
     void removeItem(const std::string& itemName);
-    void attach(Observer* obs) override;
-    void detach(Observer* obs) override;
-    void notifyObserver() override;
+    void attach(Observer* obs);
+    void detach(Observer* obs) ;
+    void notifyObserver() ;
 
     std::vector<Item> getItems() const;
     std::string getName() const;

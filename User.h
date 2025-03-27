@@ -17,9 +17,15 @@ private:
     std::vector<std::shared_ptr<ShoppingList>> shoppingLists;
 
 public:
-    User(std::string u);
-    void addList(std::shared_ptr<ShoppingList> list);
-    void update(ShoppingList* list) override;
+    explicit User(const std::string& u);
+
+    void addList(const std::shared_ptr<ShoppingList>& list);
+    void update(ShoppingList* list) ;
+
+    std::string getUsername() const;
+    std::vector<std::shared_ptr<ShoppingList>> getLists() const;
+
+    ~User() override = default;
 };
 
 #endif //LISTASPESA_P_USER_H

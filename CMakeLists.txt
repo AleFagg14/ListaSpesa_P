@@ -9,3 +9,4 @@ add_executable(ListaSpesa_P main.cpp
         Observer.h
         ShoppingList.cpp
         User.cpp)
+

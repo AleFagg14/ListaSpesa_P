@@ -4,7 +4,7 @@
 
 #include "ShoppingList.h"
 
-ShoppingList::ShoppingList(std::string n) : name(n) {}
+ShoppingList::ShoppingList(std::string n) : name(std::move(n)) {}
 
 void ShoppingList::addItem(const Item& item) {
     items [item.getName()] = item;

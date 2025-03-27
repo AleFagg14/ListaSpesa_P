@@ -1,0 +1,21 @@
+# ninja log v5
+0	92	7644261201902343	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	a8d6067ab6a2f78c
+0	92	7644261201902343	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	a8d6067ab6a2f78c
+92	1659	7644261217571463	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	90795db4c2f1f1d4
+92	1659	7644261217571463	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	90795db4c2f1f1d4
+1659	1753	7644261218527969	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	36423769ec1f4cd6
+1659	1753	7644261218527969	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	36423769ec1f4cd6
+1753	1829	7644261219277415	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	da784c74293767f9
+1753	1829	7644261219277415	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	da784c74293767f9
+1829	1917	7644261220141758	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	edca3d0c925fa231
+1829	1917	7644261220141758	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	edca3d0c925fa231
+1917	2005	7644261220995339	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	32f62ba8f7432b97
+1917	2005	7644261220995339	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	32f62ba8f7432b97
+2005	2078	7644261221745436	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	d972ae35ad2eac47
+2005	2078	7644261221745436	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	d972ae35ad2eac47
+2078	2151	7644261222479140	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9f4079ca8452a361
+2078	2151	7644261222479140	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	9f4079ca8452a361
+2151	2277	7644261223758817	CMakeFiles/googletest-populate-complete	16a51ec9ee8efa57
+2151	2277	7644261223758817	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	16a51ec9ee8efa57
+2151	2277	7644261223758817	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	16a51ec9ee8efa57
+2151	2277	7644261223758817	C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	16a51ec9ee8efa57
