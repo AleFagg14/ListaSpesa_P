@@ -1,3 +1,0 @@
-C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/CMakeFiles/ListaSpesa_P.dir
-C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/fagza/OneDrive/Desktop/Esercizi_da_me/ListaSpesa_P/cmake-build-debug/CMakeFiles/rebuild_cache.dir

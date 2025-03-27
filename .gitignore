@@ -1,0 +1,35 @@
+# Ignora cartelle di build generata da CLion
+cmake-build-*/
+
+# Ignora file di configurazione di CLion e JetBrains
+.idea/
+
+# Ignora file di compilazione e binari
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Ignora file di log
+*.log
+
+# Ignora file temporanei del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignora file di CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Ignora file di debugging e core dump
+*.core
+*.pdb
+*.dbg
