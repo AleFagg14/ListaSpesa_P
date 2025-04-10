@@ -16,7 +16,8 @@ private:
 
 public:
     Item()=default;
-    Item(std::string n, std::string c, int q);
+    Item(std::string n, std::string c = "", int q = 0);
+
 
     std::string getName() const;
     std::string getCategory() const;
