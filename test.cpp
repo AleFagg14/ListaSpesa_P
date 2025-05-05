@@ -3,6 +3,7 @@
 //
 #include <gtest/gtest.h>
 #include "ShoppingList.h"
+#include "Item.h"
 
 // Test per il metodo di aggiunta di un item
 TEST(ShoppingListTest, TestAggiuntaItem) {
@@ -23,6 +24,10 @@ TEST(ShoppingListTest, TestRimozioneItem) {
     EXPECT_EQ(lista.getItemCount(), 0);
 }
 
+
+
+
+
 // Test aggiunta di item duplicato (aggiorna o sovrascrive)
 TEST(ShoppingListTest, TestAggiuntaDuplicato) {
     ShoppingList lista("Duplicati");
@@ -32,6 +37,29 @@ TEST(ShoppingListTest, TestAggiuntaDuplicato) {
     EXPECT_EQ(lista.getItemCount(), 1);  // Deve restare uno solo
     EXPECT_EQ(lista.getItem(0).getQuantity(), 2);  // Quantità aggiornata
 }
+
+// Test del costruttore con quantità negativa
+TEST(ItemTest, CostruttoreQuantitaNegativa) {
+    EXPECT_THROW(Item("Latte", "Alimentari", -2), std::invalid_argument);
+}
+
+// Test del setter setQuantity con quantità negativa
+TEST(ItemTest, SetterQuantitaNegativa) {
+    Item item("Pasta", "Alimentari", 1);
+    EXPECT_THROW(item.setQuantity(-5), std::invalid_argument);
+}
+
+// Test positivo per quantità valida
+TEST(ItemTest, QuantitaValida) {
+    Item item("Acqua", "Bevande", 3);
+    EXPECT_EQ(item.getQuantity(), 3);
+
+    item.setQuantity(10);
+    EXPECT_EQ(item.getQuantity(), 10);
+}
+
+
+
 
 // Test nome lista
 TEST(ShoppingListTest, TestGetName) {
@@ -47,6 +75,10 @@ TEST(ShoppingListTest, TestRimozioneItemInesistnte) {
 
     EXPECT_EQ(lista.getItemCount(), 1);  // Zucchero deve restare
 }
+
+
+
+
 
 // Mock observer per test notifica
 class MockObserver : public Observer {

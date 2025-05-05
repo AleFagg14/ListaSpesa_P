@@ -33,7 +33,7 @@ public:
     void notifyObserver();
 
     // Getter
-    std::vector<Item> getItems() const;
+    std::vector<Item> getItems() const; //FIX ME cancellare
     size_t getItemCount() const; // Aggiunto
     const Item& getItem(size_t index) const; // Aggiunto
     std::string getName() const;
