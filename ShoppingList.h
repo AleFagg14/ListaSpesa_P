@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <vector>
 #include <algorithm>
+#include <map>
 
 class ShoppingList {
 private:
@@ -37,6 +38,11 @@ public:
     size_t getItemCount() const; // Aggiunto
     const Item& getItem(size_t index) const; // Aggiunto
     std::string getName() const;
+
+    //Restituire il numero di oggetti ancora da comprare
+    int getUnboughtItemCount() const;
+
+    std::map<std::string, std::vector<Item>> groupItemsByCategory() const;
 };
 
 #endif //LISTASPESA_P_SHOPPINGLIST_H

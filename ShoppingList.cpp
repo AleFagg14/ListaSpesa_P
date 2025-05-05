@@ -59,3 +59,20 @@ const Item& ShoppingList::getItem(size_t index) const {
 }
 
 std::string ShoppingList::getName() const { return name; }
+
+int ShoppingList::getUnboughtItemCount() const {
+    int count = 0;
+    for (const auto& pair : items) {
+        if (!pair.second.isBought())
+            ++count;
+    }
+    return count;
+}
+
+std::map<std::string, std::vector<Item>> ShoppingList::groupItemsByCategory() const {
+    std::map<std::string, std::vector<Item>> grouped;
+    for (const auto& pair : items) {
+        grouped[pair.second.getCategory()].push_back(pair.second);
+    }
+    return grouped;
+}

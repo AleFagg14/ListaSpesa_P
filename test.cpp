@@ -76,6 +76,35 @@ TEST(ShoppingListTest, TestRimozioneItemInesistnte) {
     EXPECT_EQ(lista.getItemCount(), 1);  // Zucchero deve restare
 }
 
+TEST(ShoppingListTest, ContaOggettiNonComprati) {
+    ShoppingList lista("Spesa");
+
+    Item latte("Latte", "Alimentari", 1);
+    Item pane("Pane", "Alimentari", 2);
+    Item detersivo("Detersivo", "Casa", 1);
+
+    pane.setBought(true);  // Solo questo è stato comprato
+
+    lista.addItem(latte);
+    lista.addItem(pane);
+    lista.addItem(detersivo);
+
+    EXPECT_EQ(lista.getUnboughtItemCount(), 2);  // Solo 2 non comprati
+}
+
+TEST(ShoppingListTest, RaggruppaPerCategoria) {
+    ShoppingList lista("Spesa");
+
+    lista.addItem(Item("Latte", "Alimentari", 1));
+    lista.addItem(Item("Pane", "Alimentari", 2));
+    lista.addItem(Item("Sapone", "Igiene", 1));
+
+    auto raggruppati = lista.groupItemsByCategory();
+
+    EXPECT_EQ(raggruppati["Alimentari"].size(), 2);
+    EXPECT_EQ(raggruppati["Igiene"].size(), 1);
+    EXPECT_EQ(raggruppati["Igiene"][0].getName(), "Sapone");
+}
 
 
 
