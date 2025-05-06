@@ -6,10 +6,10 @@
 
 void printList(const std::shared_ptr<ShoppingList>& list) {
     std::cout << " # Lista \"" << list->getName() << "\" contiene:\n";
-    for (const auto& item : list->getItems()) {
+    list->forEachItem([](const Item& item) {
         std::cout << "   - " << item.getName() << " (" << item.getCategory()
                   << "), Quantita': " << item.getQuantity() << "\n";
-    }
+    });
     std::cout << "--------------------------------------\n";
 }
 

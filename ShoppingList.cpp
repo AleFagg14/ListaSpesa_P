@@ -3,6 +3,7 @@
 //
 
 #include "ShoppingList.h"
+#include <functional>
 
 ShoppingList::ShoppingList(std::string n) : name(std::move(n)) {}
 
@@ -40,12 +41,10 @@ void ShoppingList::notifyObserver() {
     }
 }
 
-std::vector<Item> ShoppingList::getItems() const {
-    std::vector<Item> itemList;
+void ShoppingList::forEachItem(const std::function<void(const Item&)>& func) const {
     for (const auto& pair : items) {
-        itemList.push_back(pair.second);
+        func(pair.second);
     }
-    return itemList;
 }
 
 size_t ShoppingList::getItemCount() const {

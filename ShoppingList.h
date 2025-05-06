@@ -11,6 +11,7 @@
 #include <vector>
 #include <algorithm>
 #include <map>
+#include <functional>
 
 class ShoppingList {
 private:
@@ -34,7 +35,7 @@ public:
     void notifyObserver();
 
     // Getter
-    std::vector<Item> getItems() const; //FIX ME cancellare
+    void forEachItem(const std::function<void(const Item&)>& func) const;
     size_t getItemCount() const; // Aggiunto
     const Item& getItem(size_t index) const; // Aggiunto
     std::string getName() const;
