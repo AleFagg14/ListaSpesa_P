@@ -21,11 +21,19 @@ add_library(ShoppingLib
 target_include_directories(ShoppingLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # === Main Executable ===
-add_executable(ListaSpesa_P main.cpp)
+add_executable(ListaSpesa_P main.cpp
+        Tests/test_item.cpp
+        Tests/test_shoppinglist.cpp
+        Tests/test_observer.cpp
+        Tests/test_main.cpp)
 target_link_libraries(ListaSpesa_P PRIVATE ShoppingLib)
 
 # === Tests Executable ===
-add_executable(tests test.cpp)
+add_executable(tests
+        Tests/test_main.cpp
+        Tests/test_item.cpp
+        Tests/test_shoppinglist.cpp
+        Tests/test_observer.cpp )
 target_link_libraries(tests PRIVATE ShoppingLib GTest::gtest)
 
 # Mark it as a Google Test for CLion

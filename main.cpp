@@ -28,9 +28,10 @@ int main() {
 
     // Aggiunta prodotti
     list1->addItem(Item("Latte", "Alimentari", 2));
-    list1->addItem(Item("Burro", "Alimentari", 1));
     list1->addItem(Item("Pane", "Panetteria", 1));
     list1->addItem(Item("Petto di pollo", "Macelleria", 2));
+    list1->addItem(Item("Bistecca", "Macelleria", 3));
+    list1->addItem(Item("Burro", "Alimentari", 1));
     list1->addItem(Item("Cipolle", "Banco Frutta e Verdura", 4));
     list1->addItem(Item("Paprika", "Reparto Spezie e condimenti", 1));
     list1->addItem(Item("Chianti GalloNero", "Reparto Alcolici", 1));
