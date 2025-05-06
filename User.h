@@ -17,7 +17,8 @@ private:
     std::vector<std::shared_ptr<ShoppingList>> shoppingLists;
 
 public:
-    explicit User(const std::string& u);
+
+    User(const std::string& u);
 
     void addList(const std::shared_ptr<ShoppingList>& list);
     void update(ShoppingList* list) ;
